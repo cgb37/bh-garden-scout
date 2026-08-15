@@ -1,0 +1,25 @@
+{
+  "name": "garden-scout",
+  "version": "0.1.0",
+  "description": "Fast plant identification and South Florida nursery guidance.",
+  "author": {
+    "name": "CGB37"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Garden Scout",
+    "shortDescription": "Identify plants and assess them for South Florida.",
+    "longDescription": "Identify plants from photos, nursery labels, or names and get concise South Florida guidance on care, placement, growth, and pet safety.",
+    "developerName": "CGB37",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Identify this plant and tell me whether I should buy it.",
+      "Is this plant suitable for a pot in South Florida?",
+      "Compare this plant with the last one."
+    ]
+  }
+}
