@@ -1,6 +1,6 @@
 ---
 name: garden-scout
-description: Fast plant identification and South Florida nursery guidance from a photo, nursery label, or plant name. Use when the user is shopping for plants and wants a concise summary of identification, sun, water, pot suitability, in-ground suitability, mature growth, pet toxicity, and optional useful links. If the user says "save it", create a compact Markdown research note for later use in the project.
+description: Fast plant identification and South Florida nursery guidance from a photo, nursery label, or plant name. Use when the user is shopping for plants and wants a concise summary of identification, sun, water, pot suitability, in-ground suitability, mature growth, pet toxicity, and optional useful links. If the user says "save it", create a compact Markdown research note when workspace writing is available; otherwise return a ready-to-save note and filename.
 ---
 
 # Garden Scout
@@ -11,7 +11,7 @@ The normal workflow is:
 
 1. Identify the plant from the user's photo, label, or supplied name.
 2. Return a short standardized plant card.
-3. If the user says **"save it"**, create a Markdown research note for that plant in the current project so it can be used in a later session.
+3. If the user says **"save it"**, save a Markdown research note safely when writing is available, or provide its ready-to-save contents when it is not.
 4. Move on to the next plant without unnecessary follow-up.
 
 ## Inputs
@@ -152,11 +152,11 @@ Treat short follow-ups as referring to the current plant, including:
 - "compare it to the last one"
 - "save it"
 
-Do not ask the user to repeat the plant name.
+Do not ask the user to repeat the plant name. For comparisons, keep the current and last plant in context and contrast the decision-relevant fields (sun, water, pot and in-ground fit, growth, pet safety, and South Florida suitability).
 
 ## Save It
 
-When the user says **"save it"**, **"save this"**, **"add this to my research"**, or equivalent, create a Markdown file for the current plant in the current project/workspace.
+When the user says **"save it"**, **"save this"**, **"add this to my research"**, or equivalent, prepare a Markdown research note for the current plant.
 
 Use a lowercase hyphenated filename based on the common name:
 
@@ -170,9 +170,11 @@ Example:
 firebush.md
 ```
 
-If a file with that name already exists, use a distinguishing cultivar/species suffix rather than overwriting it silently.
+First determine whether the current project/workspace can be written. When writing is available, check whether the proposed filename already exists before creating anything. Never overwrite an existing note silently. If needed, use a distinguishing cultivar or species suffix; if that still collides, add a numeric suffix such as `-2` and check again. Create the note only at the confirmed-unused path.
 
-The saved file is a lightweight research note, not a finished garden-site entry. Keep it concise but include enough metadata to be useful later.
+When workspace writing is unavailable, return the suggested filename and the complete note below in a Markdown code block so the user can save it themselves. Say that it is ready to save; never say or imply that a file was saved.
+
+The note is a lightweight research record, not a finished garden-site entry. Keep it concise but include enough metadata to be useful later.
 
 Use this format:
 
@@ -211,7 +213,7 @@ Use the actual current date for `identified`.
 
 Omit the `Links` section if no useful source was consulted. Never fabricate URLs.
 
-After saving, respond briefly with the filename/path and nothing more unless there is an important warning.
+After a successful write, respond briefly with the actual filename/path and nothing more unless there is an important warning.
 
 ## Speed Rules
 
@@ -220,5 +222,5 @@ After saving, respond briefly with the filename/path and nothing more unless the
 - Avoid repeating information visible on the nursery label.
 - Do not ask the user to confirm a high-confidence ID.
 - Keep the shopping card compact.
-- "Save it" should create the note immediately from information already gathered; do not redo the research unless a critical field is uncertain.
-- After saving, be ready for the next photo.
+- "Save it" should create or prepare the note immediately from information already gathered; do not redo the research unless a critical field is uncertain.
+- After saving or providing the ready-to-save note, be ready for the next photo.
