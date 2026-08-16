@@ -40,13 +40,29 @@ After a result, ask follow-ups naturally: “What size pot?”, “How fast does
 
 ## Install and use
 
-This repository is a Codex marketplace containing one plugin: **Garden Scout**.
+This repository is a Codex marketplace containing one plugin: **Garden Scout**. The local workflow below is for the repository owner and anyone CGB37 has authorized in writing to use the software.
 
-1. Add or open this repository through the marketplace or plugin installation mechanism supported by your Codex or ChatGPT client.
-2. Install or enable the **Garden Scout** plugin.
-3. Start a conversation, attach a plant or nursery-label photo if useful, and ask a buying question.
+1. Clone the repository locally:
 
-Availability and the exact installation controls can vary by Codex or ChatGPT surface. If your client does not show the same UI, use its supported repository marketplace/plugin installation flow for this repository.
+   ```sh
+   git clone https://github.com/cgb37/bh-garden-scout.git
+   ```
+
+2. Add the cloned repository as the non-default Codex marketplace, replacing the path with its local location:
+
+   ```sh
+   codex plugin marketplace add <path-to-cloned-repository>
+   ```
+
+3. Install the plugin from that marketplace:
+
+   ```sh
+   codex plugin add garden-scout@bh-garden-scout
+   ```
+
+4. Start a fresh Codex task, attach a plant or nursery-label photo if useful, and ask a buying question.
+
+Publishing this repository on GitHub does not itself install or synchronize the plugin to ChatGPT or an iPhone. This README documents only the tested local Codex workflow above.
 
 ## Privacy and limitations
 
@@ -70,4 +86,4 @@ Plant identification can be wrong, especially when images are unclear or species
 
 ## Maintenance and contributions
 
-Feedback and issue reports are welcome where the repository host supports them. This is proprietary software: all rights are reserved. You may not copy, modify, redistribute, sublicense, or sell any part of it without prior written permission from CGB37. See [LICENSE](LICENSE).
+Feedback and issue reports are welcome where the repository host supports them. Garden Scout is proprietary software for CGB37 and anyone CGB37 authorizes in writing. Public visibility, including on GitHub, grants no right to use, copy, modify, redistribute, sublicense, or sell any part of it. See [LICENSE](LICENSE).
