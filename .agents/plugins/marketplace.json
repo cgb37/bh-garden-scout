@@ -1,0 +1,20 @@
+{
+  "name": "bh-garden-scout",
+  "interface": {
+    "displayName": "BH Garden Scout"
+  },
+  "plugins": [
+    {
+      "name": "garden-scout",
+      "source": {
+        "source": "local",
+        "path": "./plugins/garden-scout"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
