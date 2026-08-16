@@ -206,7 +206,7 @@ Short practical summary of why the plant may or may not be worth considering.
 
 ## Links
 
-- [Useful source](https://example.com/) — only include links actually used or worth keeping.
+- Actual source title — actual consulted URL; include only sources actually consulted and worth keeping.
 ```
 
 Use the actual current date for `identified`.
