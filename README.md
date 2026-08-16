@@ -13,6 +13,7 @@ Use Garden Scout with any of the following:
 
 It responds with a compact card designed for quick scanning while you shop:
 
+- **Common name** and **scientific name**
 - **ID confidence**
 - **Sun** and **water** needs
 - **Pot** and **in-ground** suitability
@@ -58,6 +59,7 @@ Plant identification can be wrong, especially when images are unclear or species
 ```text
 .
 ├── .agents/plugins/marketplace.json     # Marketplace listing
+├── .gitignore
 ├── plugins/
 │   └── garden-scout/
 │       ├── .codex-plugin/plugin.json    # Plugin manifest
