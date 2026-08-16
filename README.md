@@ -40,7 +40,7 @@ After a result, ask follow-ups naturally: “What size pot?”, “How fast does
 
 ## Install and use
 
-This repository is a Codex marketplace containing one plugin: **Garden Scout**. The local workflow below is for the repository owner and anyone CGB37 has authorized in writing to use the software.
+This repository is a Codex marketplace containing one plugin: **Garden Scout**. Anyone may download, install, and use unmodified copies of the plugin for personal or commercial use without written permission.
 
 1. Clone the repository locally:
 
@@ -84,6 +84,8 @@ Plant identification can be wrong, especially when images are unclear or species
 └── README.md
 ```
 
-## Maintenance and contributions
+## License, feedback, and contributions
 
-Feedback and issue reports are welcome where the repository host supports them. Garden Scout is proprietary software for CGB37 and anyone CGB37 authorizes in writing. Public visibility, including on GitHub, grants no right to use, copy, modify, redistribute, sublicense, or sell any part of it. See [LICENSE](LICENSE).
+Garden Scout is proprietary software. Public visibility, including on GitHub, and this license permit only the express right to download, install, and use unmodified copies. Modifying, creating derivative works, redistributing, sublicensing, or selling the software or substantial portions of it requires prior written permission from CGB37. All rights not expressly granted are reserved. See [LICENSE](LICENSE).
+
+Feedback and issue reports are welcome where the repository host supports them. They do not grant permission to contribute, modify, or submit code or other changes; contact CGB37 for written permission before doing so.
